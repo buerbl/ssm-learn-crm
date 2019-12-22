@@ -32,3 +32,5 @@ ssmlearncrm.iml
 /.idea/
 
 /*/target
+
+/*/*.iml
