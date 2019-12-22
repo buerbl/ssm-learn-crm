@@ -5,3 +5,5 @@
 - [MyBatis 简单使用](/ssm-mybatis)
 
 - [MyBatis 与 spring 简单使用](/ssm-mybatis-spring)
+
+- [MyBatis 与 spring 与 springmvc 简单使用](/ssm-mybatis-spring-springmvc)

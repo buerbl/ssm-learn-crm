@@ -2,6 +2,7 @@ package buer;
 
 import com.buer.dao.CustomerMapper;
 import com.buer.domain.Customer;
+import com.buer.service.IcustomerService;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -21,7 +22,7 @@ import java.io.InputStream;
 public class Test {
 
     @org.junit.Test
-    public void insert() throws IOException {
+    public void insertByMapper() throws IOException {
         // 1. 加载spring配置
         ApplicationContext ac = new ClassPathXmlApplicationContext("applicationContext.xml");
         // 2. 获取对象
@@ -36,6 +37,14 @@ public class Test {
         customerMapper.saveCustomer(customer);
     }
 
+    @org.junit.Test
+    public void insertByService() throws IOException {
+        // 1. 加载spring配置
+        ApplicationContext ac = new ClassPathXmlApplicationContext("applicationContext.xml");
+        // 2. 获取对象
+        IcustomerService customerService = (IcustomerService) ac.getBean("customerService");
+        customerService.saveCustomer();
+    }
 }
 
 

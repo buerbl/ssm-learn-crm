@@ -7,17 +7,6 @@
 
 ### 3. 主要源码(src\test\java\buer\Test.java)
 
-```java 
-// 1. 加载spring配置
-ApplicationContext ac = new ClassPathXmlApplicationContext("applicationContext.xml");
-// 2. 获取对象
-CustomerMapper customerMapper = (CustomerMapper) ac.getBean("customerMapper");
-System.out.println(customerMapper);
-// 3. 调用方法
-Customer customer = new Customer();
-customer.setName("booleanbl-spring");
-customer.setGender("男");
-customer.setTelephone("020-3333333");
-customer.setAddress("广州天河城广场");
-customerMapper.saveCustomer(customer);
-```
+insertByMapper() 测试mybatis与spring 是否整合成功
+
+insertByService（） 测试spring的事务是否成功
