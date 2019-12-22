@@ -15,4 +15,10 @@ public interface IcustomerService {
      * @return
      */
     List<Customer> list();
+
+    /**
+     * 修数据
+     * @return
+     */
+    Customer findById(Integer id);
 }

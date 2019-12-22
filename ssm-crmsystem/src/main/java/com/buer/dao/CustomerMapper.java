@@ -11,4 +11,6 @@ public interface CustomerMapper {
     void saveCustomer(Customer customer);
 
     List<Customer> list();
+
+    Customer findById(Integer id);
 }

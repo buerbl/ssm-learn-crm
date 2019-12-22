@@ -28,6 +28,11 @@ public class IcustomerServiceImpl implements IcustomerService {
     public List<Customer> list() {
         return customerMapper.list();
     }
+
+    @Override
+    public Customer findById(Integer id) {
+        return customerMapper.findById(id);
+    }
 }
 
 

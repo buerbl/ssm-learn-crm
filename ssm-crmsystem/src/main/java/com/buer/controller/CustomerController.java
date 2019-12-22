@@ -41,6 +41,13 @@ public class CustomerController {
         System.out.println("list");
         return service.list();
     }
+
+    @RequestMapping("/findById")
+    @ResponseBody
+    public Customer findById(Integer id){
+        System.out.println("findById");
+        return service.findById(id);
+    }
 }
 
 

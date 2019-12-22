@@ -26,4 +26,8 @@
 	<select id="list" resultType="com.buer.domain.Customer">
 		select * from t_customer
 	</select>
+
+	<select id="findById" resultType="com.buer.domain.Customer">
+		select * from t_customer where id = #{id}
+	</select>
 </mapper>
