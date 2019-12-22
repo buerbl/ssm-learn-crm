@@ -3,10 +3,10 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <!-- 该文件编写mybatis中的mapper接口里面的方法提供对应的sql语句 -->
-<mapper namespace="com.com.com.buer.dao.CustomerMapper">
+<mapper namespace="com.buer.dao.CustomerMapper">
 
     <!-- 添加客户 -->
-    <insert id="saveCustomer" parameterType="com.com.buer.domain.Customer">
+    <insert id="saveCustomer" parameterType="com.buer.domain.Customer">
 		INSERT INTO ssm.t_customer
 			(
 			NAME,
@@ -23,4 +23,7 @@
 			)
 	</insert>
 
+	<select id="list" resultType="com.buer.domain.Customer">
+		select * from t_customer
+	</select>
 </mapper>

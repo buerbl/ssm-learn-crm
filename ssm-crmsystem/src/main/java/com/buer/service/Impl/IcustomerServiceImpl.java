@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 /**
  * @Description:
@@ -21,6 +22,11 @@ public class IcustomerServiceImpl implements IcustomerService {
     @Transactional
     public void saveCustomer(Customer customer) {
         customerMapper.saveCustomer(customer);
+    }
+
+    @Override
+    public List<Customer> list() {
+        return customerMapper.list();
     }
 }
 
