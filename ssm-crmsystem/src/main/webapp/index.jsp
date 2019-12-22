@@ -61,15 +61,10 @@
      <!-- 左边系统菜单 -->
     <div data-options="region:'west',title:'系统菜单',split:true" style="width:200px;">
     	<div id="aa" class="easyui-accordion" style="width:193px;" data-options="border:0,multiple:true" >   
-		    <div title="系统管理" data-options="iconCls:'icon-save'" style="overflow:auto;padding:10px;">   
-		       <ul>
-		       	 <li><a href="javascript:void(0)" pageUrl="categroy.jsp">员工管理</a></li>
-		       </ul>
-		    </div>   
-		    <div title="商品管理" data-options="iconCls:'icon-reload',selected:true" style="padding:10px;">   
+
+		    <div title="系统管理" data-options="iconCls:'icon-reload',selected:true" style="padding:10px;">
 		       <ul>
 		       	 <li><a href="javascript:void(0)" pageUrl="customer_manage.jsp">客户管理</a></li>
-		       	 <li><a href="javascript:void(0)" pageUrl="linkman_manage.jsp">联系人管理管理</a></li>
 		       </ul>
 		    </div>     
 		</div>  
