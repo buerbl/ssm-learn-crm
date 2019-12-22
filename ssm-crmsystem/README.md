@@ -1,16 +1,23 @@
 # ssm-crm系统实战
 
-### 1 结果
+### 1. 返回json（src\main\java\com\buer\controller\CustomerController.java）
+1. 在 CustomerController 上添加 ```@ResponseBody```
+2. 需要添加 jackson 依赖
 
-#### 1.1 首页
+否则出现  
+java-lang-illegalargumentexception-no-converter-found-for-return-value-of-type  
+
+### 2 结果
+
+#### 2.1 首页
 
 ![](http://javahouse.xyz/20191223020132.png)
 
-#### 1.2 查找页
+#### 2.2 查找页
 
 ![](http://javahouse.xyz/20191223020156.png)
 
-#### 1.3 修改页
+#### 2.3 修改页
 
 ![](http://javahouse.xyz/20191223020213.png)
 
