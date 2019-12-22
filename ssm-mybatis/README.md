@@ -12,7 +12,7 @@ CREATE table t_customer(
 );
 ```
 
-### 2 主要部分 (src\test\java\com\buer\Test.java)
+### 2 主要部分 (src\test\java\com\com.buer\Test.java)
 
 究竟如何用 MyBatis 连接数据库
 
@@ -42,7 +42,7 @@ sqlSession.close();
 
 ### 3 结果 
 
-执行 src\test\java\com\buer\Test.java 的测试方法，得到结果
+执行 src\test\java\com\com.buer\Test.java 的测试方法，得到结果
 
 ![](http://javahouse.xyz/20191222140423.png)
 

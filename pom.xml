@@ -11,6 +11,8 @@
     <module>ssm-mybatis</module>
       <module>ssm-mybatis-spring</module>
       <module>ssm-mybatis-spring-springmvc</module>
+    <module>ssm-crmsystem</module>
+
   </modules>
   <packaging>pom</packaging>
 

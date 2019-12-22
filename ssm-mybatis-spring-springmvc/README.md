@@ -5,7 +5,8 @@
 ### 2. web.xml(src\main\webapp\WEB-INF\web.xml)
 
 
-### 3. 访问 http://localhost:8080/customer/index.action
+### 3. 访问  
+http://localhost:8080/customer/index.action
 
 ![](http://javahouse.xyz/20191222192901.png)
 

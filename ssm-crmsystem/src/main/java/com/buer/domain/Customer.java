@@ -55,7 +55,7 @@ public class Customer {
 
     @Override
     public String toString() {
-        return "com.com.buer.domain.Customer{" +
+        return "com.com.Customer{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", gender='" + gender + '\'' +

@@ -7,3 +7,5 @@
 - [MyBatis 与 spring 简单使用](/ssm-mybatis-spring)
 
 - [MyBatis 与 spring 与 springmvc 简单使用](/ssm-mybatis-spring-springmvc)
+
+- [ssm-crm系统实战](/ssm-crmsystem)
