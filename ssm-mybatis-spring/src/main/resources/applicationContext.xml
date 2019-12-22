@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context.xsd
+	http://www.springframework.org/schema/aop
+	http://www.springframework.org/schema/aop/spring-aop.xsd
+	http://www.springframework.org/schema/tx
+	http://www.springframework.org/schema/tx/spring-tx.xsd">
+
+    <!-- 读取jdbc.properties -->
+    <context:property-placeholder location="classpath:jdbc.properties"/>
+
+    <!-- 创建DataSource -->
+    <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
+        <property name="url" value="${jdbc.url}"/>
+        <property name="driverClassName" value="${jdbc.driverClass}"/>
+        <property name="username" value="${jdbc.user}"/>
+        <property name="password" value="${jdbc.password}"/>
+        <property name="maxActive" value="10"/>
+        <property name="maxIdle" value="5"/>
+    </bean>
+
+    <!-- 创建SqlSessionFactory对象 -->
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <!-- 关联连接池 -->
+        <property name="dataSource" ref="dataSource"/>
+        <!-- 加载mapper.xml -->
+        <property name="mapperLocations" value="classpath:mapper/*.xml"/>
+    </bean>
+    <!-- Mapper所有接口的扫描 -->
+    <!--注意：如果使用Mapper接口包扫描，那么每个Mapper接口在Spring容器中的id名称为类名： 例如 CustomerMapper -> customerMapper-->
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <!-- 配置Mapper接口所在包路径  -->
+        <property name="basePackage" value="com.buer.dao"></property>
+    </bean>
+
+
+</beans>
