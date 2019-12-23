@@ -1,46 +1,47 @@
 # MyBatis 简单使用
 
-### 1 执行 sql (src\main\mysql\c_customer.sql)
+### 0 文件路径图
 
-```sql
-CREATE table t_customer(
-	id int PRIMARY KEY auto_increment,
-	name VARCHAR(20),
-	gender char(1),
-	telephone VARCHAR(20),
-	address VARCHAR(50)
-);
-```
+![](http://javahouse.xyz/20191223161415.png)
 
-### 2 主要部分 (src\test\java\com\com.buer\Test.java)
+### 1 sql(src\main\mysql\c_customer.sql)
 
-究竟如何用 MyBatis 连接数据库
+首先找到 sql 文件  
+ 
+![](http://javahouse.xyz/20191223161943.png)
+  
+得到结果
+    
+![](http://javahouse.xyz/20191223160542.png)
 
-```java
-//1.创建SqlSessionFactoryBuilder
-SqlSessionFactoryBuilder builer = new SqlSessionFactoryBuilder();
-//加载sqlMapConfig.xml文件
-InputStream is = Resources.getResourceAsStream("sqlMapConfig.xml");
-//2.创建sqlSessionFactory
-SqlSessionFactory factory = builer.build(is);
-//3.打开SqlSession
-SqlSession sqlSession = factory.openSession();
-///4.获取Mapper接口的对象
-CustomerMapper customerMapper = sqlSession.getMapper(CustomerMapper.class);
-//5.操作
-Customer customer = new Customer();
-customer.setName("booleanbl");
-customer.setGender("男");
-customer.setTelephone("020-3333333");
-customer.setAddress("广州天河城广场");
-customerMapper.saveCustomer(customer);
-//6.提交事务
-sqlSession.commit();
-//7.关闭资源
-sqlSession.close();
-```
+### 2 编写 sqlMapConfig.xml（src\main\resources\sqlMapConfig.xml）
 
-### 3 结果 
+这是一个 mybatis 的配置文件，他的作用是连接数据库以及找到相应的 xml 文件
+
+![](http://javahouse.xyz/20191223161216.png) 
+
+
+
+### 3 编写实体类（src\main\java\com\buer\domain\Customer.java）
+
+实体类与数据库字段对应
+
+![](http://javahouse.xyz/20191223162152.png)
+
+
+### 4 编写 CustomerMapper （src\main\java\com\buer\dao\CustomerMapper.java）
+
+![](http://javahouse.xyz/20191223162239.png)
+
+### 5 编写 CustomerMapper.xml （src\main\resources\CustomerMapper.xml）
+
+![](http://javahouse.xyz/20191223162536.png)
+
+### 6 测试 (src\test\java\com\com.buer\Test.java)
+
+![](http://javahouse.xyz/20191223162741.png)
+
+### 7 结果 
 
 执行 src\test\java\com\com.buer\Test.java 的测试方法，得到结果
 

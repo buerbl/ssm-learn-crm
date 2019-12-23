@@ -14,6 +14,7 @@ import lombok.ToString;
 @Getter
 @Setter
 @ToString
+
 @AllArgsConstructor
 public class Customer {
     private  Integer id;
