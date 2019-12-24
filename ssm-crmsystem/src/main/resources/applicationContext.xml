@@ -40,7 +40,6 @@
         <property name="basePackage" value="com.buer.dao"></property>
     </bean>
 
-
     <!-- 开启Spring的IOC注解扫描 -->
     <context:component-scan base-package="com.buer"/>
 
