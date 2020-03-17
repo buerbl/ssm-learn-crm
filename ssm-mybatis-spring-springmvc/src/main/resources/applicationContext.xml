@@ -37,12 +37,12 @@
     <!--注意：如果使用Mapper接口包扫描，那么每个Mapper接口在Spring容器中的id名称为类名： 例如 CustomerMapper -> customerMapper-->
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
         <!-- 配置Mapper接口所在包路径  -->
-        <property name="basePackage" value="com.com.buer.dao"></property>
+        <property name="basePackage" value="com.buer.dao"></property>
     </bean>
 
 
     <!-- 开启Spring的IOC注解扫描 -->
-    <context:component-scan base-package="com.com.buer"/>
+    <context:component-scan base-package="com.buer"/>
 
     <!-- 开启Spring的事务 -->
     <!-- -事务管理器 -->

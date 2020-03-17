@@ -12,7 +12,7 @@
         http://www.springframework.org/schema/context/spring-context.xsd">
 
     <!-- 扫描Controller所在的包 -->
-    <contenxt:component-scan base-package="com.com.buer.controller"/>
+    <contenxt:component-scan base-package="com.buer.controller"/>
 
     <!-- 注解驱动 -->
     <mvc:annotation-driven></mvc:annotation-driven>
